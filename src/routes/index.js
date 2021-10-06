@@ -18,4 +18,8 @@ const { uploadFile } = require("../middlewares/UploadFiles");
 router.post("/register", Register);
 router.get("/login", Login);
 
+// User Router
+router.get("/users", GetUsers);
+router.delete("/user/:id", DeleteUsers);
+
 module.exports = router;
