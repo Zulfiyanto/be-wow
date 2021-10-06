@@ -29,4 +29,10 @@ router.get("/book/:id", GetBook);
 router.patch("/book/:id", auth, uploadFile("book_file"), UpdateBook);
 router.delete("/book/:id", auth, DeleteBook);
 
+// Transactions Router
+router.post("/transaction", auth, uploadFile("transfer_proof"), AddTransaction);
+router.patch("/transaction/:id", auth, UpdateTransaction);
+router.get("/transaction/:id", GetTransaction);
+router.get("/transactions", GetTransactions);
+
 module.exports = router;
