@@ -14,6 +14,8 @@ const { GetUsers, DeleteUsers } = require("../controllers/User");
 const { auth } = require("../middlewares/auth");
 const { uploadFile } = require("../middlewares/UploadFiles");
 
+// Auth Router
+router.post("/register", Register);
 router.get("/login", Login);
 
 module.exports = router;
