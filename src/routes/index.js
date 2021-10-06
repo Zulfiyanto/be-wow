@@ -22,4 +22,11 @@ router.get("/login", Login);
 router.get("/users", GetUsers);
 router.delete("/user/:id", DeleteUsers);
 
+// Book Router
+router.post("/book", auth, uploadFile("book_file"), AddBook);
+router.get("/books", GetBooks);
+router.get("/book/:id", GetBook);
+router.patch("/book/:id", auth, uploadFile("book_file"), UpdateBook);
+router.delete("/book/:id", auth, DeleteBook);
+
 module.exports = router;
